@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata: 
+  name: ka-01
+  labels:
+    name: ka-cluster
+    type: nfs
+spec:
+  nfs:
+    path: /test/ka-01
+    server: 192.168.65.14
+  accessModes: 
+  - "ReadWriteOnce"
+  capacity:
+    storage: 1Gi
+  persistentVolumeReclaimPolicy: Recycle
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata: 
+  name: ka-02
+  labels:
+    name: ka-cluster
+    type: nfs
+spec:
+  nfs:
+    path: /test/ka-02
+    server: 192.168.65.14
+  accessModes: 
+  - "ReadWriteOnce"
+  capacity:
+    storage: 1Gi
+  persistentVolumeReclaimPolicy: Recycle
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata: 
+  name: ka-03
+  labels:
+    name: ka-cluster
+    type: nfs
+spec:
+  nfs:
+    path: /test/ka-03
+    server: 192.168.65.14
+  accessModes: 
+  - "ReadWriteOnce"
+  capacity:
+    storage: 1Gi
+  persistentVolumeReclaimPolicy: Recycle
